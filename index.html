@@ -47,8 +47,8 @@
 
         <section>
             <q>
-                Pretend you're a new programmer tasked with maintenance of a file on an old linux server.  You ssh in
-                and try editing the file with vim, since you've heard good things about it.  
+                Pretend you're in Git Bash doing an interactive rebase or tagging a release.  Your console opens
+                the git-generated temporary file in Vim, since you configured it that way when you installed it...  
             </q>
             <br>
             <q class="fragment">
@@ -57,7 +57,7 @@
                 the application like normal.  What now?
             </q>
             <br>
-            <span class="fragment">(cue demo - file: <code style="color:#ff2c2d"><code style="color:#ff2c2d">basics.py</code></code>)</span>
+            <span class="fragment">(cue demo - file: <code style="color:#ff2c2d"><code style="color:#ff2c2d">basics.js</code></code>)</span>
         </section>
 
         <section>
@@ -107,10 +107,27 @@
             <h2><span style="color:#17ff2e">Motions</span> and Text Objects</h2>
             <p>Motions let you jump efficiently around in text.  Some examples:</p>
             <ul class="fragment">
-                <li><code class="fragment highlight-green">w</code> - forward to next word</li>
-                <li><code class="fragment highlight-green">e</code> - forward to end of word</li>
-                <li><code class="fragment highlight-green">fc</code> - forward to next occurrence of c</li>
-                <li><code class="fragment highlight-green">tc</code> - forward 'til (to character before) next occurence of c</li>
+                <li><code class="fragment highlight-green">w</code> - 
+                    <code class="fragment highlight-blue">f</code>orward 
+                    <code class="fragment highlight-blue">t</code>o 
+                    <code class="fragment highlight-blue">n</code>ext 
+                    <code class="fragment highlight-blue">w</code>ord (first character)
+                </li>
+                <li><code class="fragment highlight-green">e</code> - 
+                    forwar<code class="fragment highlight-blue">d</code>
+                    t<code class="fragment highlight-blue">o</code>
+                    en<code class="fragment highlight-blue">d</code>
+                    o<code class="fragment highlight-blue">f</code>
+                    wor<code class="fragment highlight-blue">d</code> (last character)
+                </li>
+                <li><code class="fragment highlight-green">fc</code> - 
+                    forward to next o<code class="fragment highlight-blue">c</code><code class="fragment highlight-blue">c</code>urrence of 
+                        <code class="fragment highlight-blue">c</code>
+                         (; to repeat!)
+                </li>
+                <li><code class="fragment highlight-green">tc</code> - forward 'til next 
+                    <code class="fragment highlight-blue">o</code>ccurence of c (to character before)
+                </li>
             </ul>
         </section>
 
@@ -128,7 +145,7 @@
                 </ul>
             </p>
             <p class="fragment">Other objects exists as well: sentences, paragraphs, {, (etc)...</p>
-            <p class="fragment">(cue demo - file: <code style="color:#ff2c2d">motions-objects.scala</code>)</p>
+            <p class="fragment">(cue demo - file: <code style="color:#ff2c2d">MotionsObjects.cs</code>)</p>
         </section>
 
         <section>
@@ -167,7 +184,7 @@
             <q class="fragment">
                 Enter the <code>.</code> (dot) command.
             </q>
-            <p class="fragment">(cue demo - file: <code style="color:#ff2c2d">move-op-repeat.scala</code>)</p>
+            <p class="fragment">(cue demo - file: <code style="color:#ff2c2d">MoveOpRepeat.cs</code>)</p>
         </section>
 
         <section>
@@ -207,22 +224,22 @@
             <h2>Adopting vim</h2>
             <ul>
                 <li class="fragment">Go vim or go home--Give it a real chance!</li>
-                <li class="fragment">Don't go crazy configuring yet!  Grab a sensible, but not HUGE, "modern" vimrc template (See
-                <code>example_vimrc</code> in project) to start; this can be expanded to your preference.</li>
+                <li class="fragment">Don't go crazy configuring yet!  Grab a Vim extension for your favorite editor (e.g. <code>vscodevim</code>)
+                to start; Or try the real thing if you are feeling adventurous.  (warning: <strong>A LOT</strong> more configuration required!)</li>
                 <li class="fragment">Get back to "pre-vim" productivity, then <strong>exceed it</strong>...  Hopefully shouldn't
                 take long.</li>
-                <li class="fragment">How?</li>
+                <li class="fragment">How?  Practice!</li>
             </ul>
         </section>
 
         <section>
             <h2>Adopting vim</h2>
             <ul>
-                <li class="fragment">Learn the normal mode keystrokes.  <code>:help [key]</code> is super helpful here.</li>
+                <li class="fragment">Learn the normal mode keystrokes.  Googling Vim docs is super helpful here.</li>
                 <li class="fragment">... But one step at a time! Pick one thing, drill it into your muscle memory, repeat.</li>
-                <li class="fragment">Learn the vim motions + objects.  <code>:help motion.txt</code></li>
+                <li class="fragment">Learn the vim motions + objects.</li>
                 <li class="fragment">DRY: notice repetition, cut it out. Again, <code>.</code> is super important, but
-                there are others like <code>@@</code>, <code>&amp;</code>, etc</li>
+                there are others like <code>@@</code>, etc</li>
                 <li class="fragment">Don't rote memorize!  Long, specific commands are just chained smaller components,
                 so learn + reuse those components. ex: <code>ggVGy -&gt; gg, V, G, y</code></li>
                 <li class="fragment">But seriously, practice!  (See second bullet point)</li>
@@ -237,21 +254,14 @@
             <ul class="fragment">
                 <li>emacs: evil mode - Oddly enough, best received of all...</li>
                 <li>sublime: vintage mode</li>
-                <li>eclipse: vrapper</li>
-                <li>bash: <code>set editing-mode vi</code> in <code>~/.inputrc</code>... or <code>set -o vi</code></li>
-                <li>Firefox: vimperator, pentadactyl</li>
+                <li>visual studio code: vscodevim</li>
+                <li>visual studio: vsvim</li>
+                <li>firefox: vimperator, pentadactyl</li>
             </ul>
         </section>
 
-
-
         <section>
-            <h1>Misc Cool Demos</h1>
-            <h3>(Moving beyond stock vim)</h3>
-        </section>
-
-        <section>
-            <h2>Plugins for the skeptics</h2>
+            <h2>Plugins (how "true" Vim is extended)</h2>
             <ul class="fragment">
                 <li>Use pathogen!! (or vundle)</li>
                 <li>ctrl-p</li>
@@ -259,24 +269,19 @@
                 <li>vim-surround</li>
                 <li>(Basically anything Tim Pope)</li>
             </ul>
-            <p class="fragment">(cue demo - no file; just plugins)</p>
-        </section>
-
-        <section>
-            <h2>Filters</h2>
-            <p>(Inspired by previous ACME text editing L&amp;L)</p>
-            <p class="fragment">Lets you run your selections through arbitrary code/scripts</p>
-            <p class="fragment">(cue demo - file: <code style="color:#ff2c2d">filters.py</code>)</p>
+            <div class="fragment">
+                <img src="http://i.imgur.com/jSCwGjU.gif?1" style="max-width: 80%; max-width: 80%;"/>
+            </div>
         </section>
 
         <section>
             <h2>More demos?</h2>
-            <p>Perhaps during dev demo days?</p>
+            <p>I'm happy to help anyone get started!</p>
         </section>
 
         <section>
             <h1>Thanks!</h1>
-            (<a href="https://github.com/alexkuang/vim-ll">https://github.com/alexkuang/vim-ll</a>)
+            (Credit for presentation template: <a href="https://github.com/alexkuang/vim-ll">https://github.com/alexkuang/vim-ll</a>)
         </section>
 			</div>
 

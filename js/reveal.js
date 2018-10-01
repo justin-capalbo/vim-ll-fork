@@ -75,7 +75,7 @@ var Reveal = (function(){
 			autoSlideStoppable: true,
 
 			// Enable slide navigation via mouse wheel
-			mouseWheel: false,
+			mouseWheel: true,
 
 			// Apply a 3D roll to links on hover
 			rollingLinks: false,
@@ -93,7 +93,7 @@ var Reveal = (function(){
 			theme: null,
 
 			// Transition style
-			transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+			transition: 'zoom', // default/cube/page/concave/zoom/linear/fade/none
 
 			// Transition speed
 			transitionSpeed: 'default', // default/fast/slow
