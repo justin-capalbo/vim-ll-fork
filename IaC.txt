@@ -1,0 +1,54 @@
+Why IaC
+
+- Manage vastly increased complexity
+- Reduce risk
+- Understand changes before they hit production
+
+Dev vs. Ops
+
+Dev
+- Better, faster, one minute
+
+Ops
+- Don't break anything, don't lose data
+
+DevOps
+- Confidence in deployment
+
+IaC is similar to program code:
+- Controlled changes
+- Build outside of user view
+- Good code vs. bad code, patterns and anti patterns
+
+IaC is different than program code:
+- Program = HOW, IaC = WHAT
+- Behavior is something that happens within the infrastructure
+- More difficult to unit test.  Nearly every test is an integration test
+- Hard to isolate the pieces
+
+IaC is about:
+- Mapping your technical concepts to thought processes
+
+The end goal:
+- Running system... but
+- Changes and future deployments
+- Keep it running
+Maintenance Window vs. Continuous Uptime
+
+Be Declarative
+- Don't think about procedures but rather about "desired state"
+- Tools like CloudFormation can look at the current state and the desired state and determine how to get there. 
+
+Modularity
+- IaC can have objects and functions too.  Keys:
+    o Re-use
+    o Modifying by extension: Open/Closed principle
+    o Consistent definitions: Single responsibility principle
+- Make modules semantically meaningful rather than functionally meaningful
+
+Test and Verify
+- The first part of monitoring.  I have a monitoring system, then I set it up.  The monitoring system is a fore-thought.
+
+Fullstack is ???
+- Difficult to change post deployment
+- Difficult to deal with cross cutting concern
